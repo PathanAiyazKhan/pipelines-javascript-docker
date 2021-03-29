@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pathanaiyazkhanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pathanaiyazkhanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: pathanaiyazkhanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: pathanaiyazkhanpipelinesjavascriptdocker 
+          image: r1acr.azurecr.io/pathanaiyazkhanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
